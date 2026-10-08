@@ -1,0 +1,311 @@
+{
+ "checks": {
+  "loads, start screen waiting, no audio before first tap": {
+   "pass": true,
+   "detail": {
+    "running": false,
+    "audio": "none"
+   }
+  },
+  "first tap starts game + unlocks Web Audio (silent-buffer path used on iOS)": {
+   "pass": true,
+   "detail": {
+    "audio": "running",
+    "unlocked": true
+   }
+  },
+  "button phone fires its effect": {
+   "pass": true,
+   "detail": [
+    "btn:phone",
+    "sfx:ring"
+   ]
+  },
+  "button music fires its effect": {
+   "pass": true,
+   "detail": [
+    "btn:music",
+    "song:0"
+   ]
+  },
+  "button stars fires its effect": {
+   "pass": true,
+   "detail": [
+    "btn:stars",
+    "sfx:confetti",
+    "say:Stars!"
+   ]
+  },
+  "button animal fires its effect": {
+   "pass": true,
+   "detail": [
+    "btn:animal",
+    "sfx:neigh",
+    "say:Horse! Neigh!",
+    "say:Hello, Hannah! Beep beep!"
+   ]
+  },
+  "button shapes fires its effect": {
+   "pass": true,
+   "detail": [
+    "btn:shapes",
+    "sfx:boing",
+    "say:Blue square!"
+   ]
+  },
+  "button rainbow fires its effect": {
+   "pass": true,
+   "detail": [
+    "btn:rainbow",
+    "sfx:rainbow",
+    "say:Rainbow!"
+   ]
+  },
+  "button scene fires its effect": {
+   "pass": true,
+   "detail": [
+    "btn:scene",
+    "sfx:boop",
+    "say:Catch the stars!"
+   ]
+  },
+  "button book opens sticker book": {
+   "pass": true
+  },
+  "sticker book back button closes it": {
+   "pass": true
+  },
+  "tap wheel hub honks horn": {
+   "pass": true
+  },
+  "headlight dial toggles lights": {
+   "pass": true
+  },
+  "hazard button flashes": {
+   "pass": true
+  },
+  "hazard actually blinks": {
+   "pass": true,
+   "detail": {
+    "framesOn": 11
+   }
+  },
+  "gear lever cycles speeds": {
+   "pass": true,
+   "detail": [
+    1,
+    2,
+    0
+   ]
+  },
+  "drag wheel clockwise → wheel turns right, car moves right": {
+   "pass": true,
+   "detail": {
+    "wheel": 144,
+    "carX": 0.899
+   }
+  },
+  "drag wheel anticlockwise → car moves left": {
+   "pass": true,
+   "detail": {
+    "wheel": -137.6,
+    "carX": -0.899
+   }
+  },
+  "wheel springs back toward centre when let go": {
+   "pass": true,
+   "detail": {
+    "wheel": -23.1
+   }
+  },
+  "road scrolls, scenery spawns, animals say their name + sound": {
+   "pass": true,
+   "detail": {
+    "items": 15,
+    "sample": [
+     "Slow and steady.",
+     "Sheep! Baa!",
+     "Duck! Quack quack!"
+    ]
+   }
+  },
+  "10 stars → 'You did it, Hannah!' celebration + next place unlocked": {
+   "pass": true,
+   "detail": {
+    "stars": 10,
+    "unlocked": 2,
+    "yayText": "You did it, Hannah!"
+   }
+  },
+  "after celebration the car drives into the City": {
+   "pass": true,
+   "detail": {
+    "scene": "city"
+   }
+  },
+  "spoken question (tap the green button) → praise + bonus star": {
+   "pass": true,
+   "detail": [
+    "Yay! Great job, Hannah!"
+   ]
+  },
+  "progress saved in localStorage survives reload": {
+   "pass": true,
+   "detail": {
+    "before": 11,
+    "after": 11
+   }
+  },
+  "200 random taps (some two-finger): no crash, game still running": {
+   "pass": true,
+   "detail": {
+    "gameTimeAdvanced": 36.9,
+    "errors": 0
+   }
+  },
+  "sounds never stack: simultaneous voices capped": {
+   "pass": true,
+   "detail": {
+    "maxVoicesEver": 4,
+    "cap": 4,
+    "sampledMax": 3
+   }
+  },
+  "speech never queues (newest cancels older)": {
+   "pass": true,
+   "detail": {
+    "maxQueuedUtterances": 1,
+    "spokenDuringMash": 48
+   }
+  },
+  "effects bounded (confetti ≤260, items ≤80)": {
+   "pass": true,
+   "detail": {
+    "conf": 0,
+    "items": 14
+   }
+  },
+  "page did not zoom or scroll": {
+   "pass": true
+  },
+  "browser Back does not leave the game": {
+   "pass": true
+  },
+  "long-press top-left corner (1.5 s) opens grown-up settings": {
+   "pass": true
+  },
+  "volume + mute controls work": {
+   "pass": true,
+   "detail": {
+    "vol": 0.3,
+    "muted": true,
+    "voice": true,
+    "quiz": true
+   }
+  },
+  "settings close back to driving": {
+   "pass": true
+  },
+  "hit targets ≥ 80 px — landscape tablet 1180x820": {
+   "pass": true,
+   "detail": {
+    "smallest": 121
+   }
+  },
+  "hit targets ≥ 80 px — portrait phone 390x844": {
+   "pass": true,
+   "detail": {
+    "smallest": 80
+   }
+  },
+  "hit targets ≥ 80 px — portrait small phone 375x667": {
+   "pass": true,
+   "detail": {
+    "smallest": 80
+   }
+  },
+  "hit targets ≥ 80 px — landscape phone 844x390": {
+   "pass": true,
+   "detail": {
+    "smallest": 80
+   }
+  },
+  "zero network requests (only the local file)": {
+   "pass": true,
+   "detail": {
+    "totalRequests": 2,
+    "external": []
+   }
+  },
+  "no JavaScript errors in the whole run": {
+   "pass": true,
+   "detail": []
+  }
+ },
+ "notes": [],
+ "mashSampleLog": [
+  {
+   "t": 36.5,
+   "type": "gear",
+   "name": 2
+  },
+  {
+   "t": 36.7,
+   "type": "sfx",
+   "name": "tick"
+  },
+  {
+   "t": 36.88,
+   "type": "sfx",
+   "name": "baa"
+  },
+  {
+   "t": 36.88,
+   "type": "say",
+   "name": "Sheep! Baa!"
+  },
+  {
+   "t": 37.1,
+   "type": "sfx",
+   "name": "tick"
+  },
+  {
+   "t": 37.36,
+   "type": "btn",
+   "name": "animal"
+  },
+  {
+   "t": 37.36,
+   "type": "sfx",
+   "name": "rooster"
+  },
+  {
+   "t": 37.36,
+   "type": "say",
+   "name": "Rooster! Cock-a-doodle-doo!"
+  },
+  {
+   "t": 37.55,
+   "type": "sfx",
+   "name": "tick"
+  },
+  {
+   "t": 37.55,
+   "type": "btn",
+   "name": "phone"
+  },
+  {
+   "t": 37.55,
+   "type": "sfx",
+   "name": "ring"
+  },
+  {
+   "t": 37.93,
+   "type": "sfx",
+   "name": "tick"
+  }
+ ],
+ "passed": 39,
+ "total": 39,
+ "when": "Wed Oct 07 2026 20:14:39 GMT-0400 (Eastern Daylight Time)"
+}

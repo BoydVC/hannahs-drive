@@ -1,0 +1,7 @@
+frame 0 {"t":1.53,"scene":"farm","stars":7,"carX":0,"wheel":0,"yay":false}
+frame 150 {"t":6.53,"scene":"farm","stars":7,"carX":-0.813,"wheel":-84.4,"yay":false}
+frame 300 {"t":11.53,"scene":"farm","stars":10,"carX":0,"wheel":0,"yay":true}
+frame 450 {"t":16.53,"scene":"city","stars":10,"carX":0,"wheel":0,"yay":false}
+frame 600 {"t":21.53,"scene":"city","stars":10,"carX":0,"wheel":0,"yay":false}
+frame 750 {"t":26.53,"scene":"night","stars":10,"carX":0,"wheel":0,"yay":false}
+video done

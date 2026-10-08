@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; media-src data: blob:; font-src data:; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Big Drive"><meta name="theme-color" content="#e8322b">
+<title>Hannah's Big Drive</title>
+<style>/*CSS*/</style></head>
+<body>
+<div id="dash">
+ <div id="screen"><canvas id="road"></canvas></div>
+ <div id="btns">
+  <button class="btn" id="b-phone" data-k="phone" aria-label="phone">📞</button>
+  <button class="btn" id="b-music" data-k="music" aria-label="music">🎵</button>
+  <button class="btn" id="b-stars" data-k="stars" aria-label="stars">🎉</button>
+  <button class="btn" id="b-animal" data-k="animal" aria-label="animal">🐮</button>
+  <button class="btn" id="b-shapes" data-k="shapes" aria-label="shapes"><svg viewBox="0 0 100 100" style="width:62%;height:62%"><circle cx="30" cy="32" r="20" fill="#fff"/><rect x="56" y="12" width="36" height="36" rx="5" fill="#ffd60a"/><path d="M50 52 L76 92 H24Z" fill="#2f80ff" stroke="#fff" stroke-width="5" stroke-linejoin="round"/></svg></button>
+  <button class="btn" id="b-rainbow" data-k="rainbow" aria-label="rainbow">🌈</button>
+  <button class="btn" id="b-scene" data-k="scene" aria-label="next place">🗺️</button>
+  <button class="btn" id="b-book" data-k="book" aria-label="sticker book">📒</button>
+ </div>
+ <div id="wheelArea"><svg id="wheel" viewBox="0 0 200 200" aria-label="steering wheel">
+  <circle cx="100" cy="100" r="86" fill="none" stroke="#151515" stroke-width="24"/>
+  <circle cx="100" cy="100" r="86" fill="none" stroke="#3a3a3a" stroke-width="4" stroke-dasharray="6 10"/>
+  <path d="M58 35 A86 86 0 0 1 142 35" fill="none" stroke="#ffd000" stroke-width="14" stroke-linecap="round"/>
+  <path d="M100 100 L14 108 M100 100 L186 108 M100 100 L100 188" stroke="#151515" stroke-width="26" stroke-linecap="round"/>
+  <path d="M100 100 L18 108 M100 100 L182 108 M100 100 L100 184" stroke="#555" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="100" cy="100" r="40" fill="#1e7bff" stroke="#151515" stroke-width="6"/>
+  <circle cx="100" cy="100" r="31" fill="#ffd000"/>
+  <path d="M84 92 h10 l14 -10 v36 l-14 -10 h-10z" fill="#e8322b"/><path d="M114 90 q8 10 0 20 M119 85 q13 15 0 30" fill="none" stroke="#e8322b" stroke-width="4" stroke-linecap="round"/>
+ </svg></div>
+ <div id="side">
+  <button id="hazard" aria-label="hazard lights"><svg viewBox="0 0 100 90"><path d="M50 6 L95 84 H5Z" fill="#ff2a2a" stroke="#fff" stroke-width="6" stroke-linejoin="round"/><path d="M50 34 L72 72 H28Z" fill="none" stroke="#fff" stroke-width="7" stroke-linejoin="round"/></svg></button>
+  <button id="lights" aria-label="headlights"><div id="dial">💡</div></button>
+  <div id="gear" aria-label="gear lever"><div id="gtrack"></div>
+   <span class="gicon" data-g="2" style="top:16%">🚀</span><span class="gicon" data-g="1" style="top:50%">🚙</span><span class="gicon" data-g="0" style="top:84%">🐢</span>
+   <div id="gknob"></div></div>
+ </div>
+</div>
+<canvas id="fx"></canvas>
+<div id="pc" aria-label="grown-ups: press and hold"><span></span></div>
+<div class="ov" id="yay"><div class="card"><div class="big" id="yaybig">🏆</div><div class="msg">You did it, Hannah!</div></div></div>
+<div class="ov" id="book"><div class="top"><div id="btotal">⭐ 0</div><div id="bname">Hannah's Stickers</div><button id="bclose" aria-label="back">↩️</button></div>
+ <div id="bscenes"></div><div id="bthings"></div></div>
+<div class="ov" id="parent"><div class="p">
+ <h2>Grown-up settings</h2>
+ <label>Volume <input type="range" id="pvol" min="0" max="1" step="0.05"></label>
+ <div class="row"><button id="pmute">Sound on</button><button id="pvoice">Talking on</button></div>
+ <div class="row"><button id="pquiz">Questions on</button><button id="pfs">Full screen</button></div>
+ <div class="row"><button id="preset">Reset stickers</button><button id="pexit">Leave kid mode</button></div>
+ <button id="pclose" class="on">Back to driving</button>
+ <small>Open this panel by pressing and holding the top-left corner for 1.5 seconds. On iPhone/iPad, Guided Access (Settings → Accessibility) is the best way to lock the screen to this game. If there is no sound, flip the silent switch off and turn the volume up.</small>
+</div></div>
+<div class="ov show" id="start"><button id="go" aria-label="start driving">🚗</button><div class="t">Hannah's Big Drive</div></div>
+<script>/*JS*/</script>
+</body></html>
